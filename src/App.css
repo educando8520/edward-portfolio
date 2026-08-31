@@ -1,0 +1,33 @@
+.app-main {
+  position: relative;
+  z-index: 1;
+}
+
+.app-footer {
+  position: relative;
+  z-index: 1;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  background: rgba(5, 7, 13, 0.6);
+  backdrop-filter: blur(8px);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+.footer-mid {
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}

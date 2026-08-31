@@ -1,0 +1,68 @@
+.terminal-section {
+  padding-block: clamp(60px, 9vh, 100px);
+}
+.terminal {
+  max-width: 720px;
+  margin-inline: auto;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  border: 1px solid var(--border-bright);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(34, 211, 238, 0.04);
+}
+.term-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(10, 14, 26, 0.8);
+  border-bottom: 1px solid var(--border);
+}
+.term-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.term-dot.r { background: #ff5f56; }
+.term-dot.y { background: #ffbd2e; }
+.term-dot.g { background: #27c93f; }
+.term-title {
+  margin-left: 10px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.term-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 220px;
+}
+.term-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.term-prompt {
+  color: var(--cyan);
+  font-weight: 600;
+}
+.term-cmd {
+  color: var(--violet-soft);
+}
+.term-out {
+  color: var(--text);
+}
+.term-caret {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--cyan);
+  vertical-align: middle;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink {
+  to { opacity: 0; }
+}

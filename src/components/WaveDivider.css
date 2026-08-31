@@ -1,0 +1,11 @@
+.wave-divider {
+  width: 100%;
+  height: 60px;
+  line-height: 0;
+  pointer-events: none;
+}
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

@@ -1,0 +1,115 @@
+.cloud-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.cloud-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(10, 14, 26, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.flow-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(15, 20, 34, 0.6);
+  transition: border-color 0.4s var(--ease);
+}
+.flow-node:hover {
+  border-color: var(--border-bright);
+}
+
+.flow-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.35), inset 0 0 20px rgba(34, 211, 238, 0.08);
+  pointer-events: none;
+}
+
+.flow-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(59, 130, 246, 0.15));
+  border: 1px solid var(--border-bright);
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+.flow-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.flow-label {
+  font-weight: 600;
+  color: var(--white);
+}
+.flow-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.flow-arrow {
+  color: var(--graphite-300);
+  margin: 6px auto 0;
+  display: block;
+  align-self: center;
+  opacity: 0.5;
+}
+
+.cloud-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 100px;
+}
+.cloud-card {
+  padding: 26px;
+}
+.cloud-card-icon {
+  color: var(--cyan);
+  margin-bottom: 12px;
+}
+.cloud-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.cloud-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+}
+.cloud-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 880px) {
+  .cloud-layout {
+    grid-template-columns: 1fr;
+  }
+  .cloud-side {
+    position: static;
+  }
+}

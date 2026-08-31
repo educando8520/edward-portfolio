@@ -1,0 +1,80 @@
+.network-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.topology {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.topology-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+.topology-svg {
+  width: 100%;
+  flex: 1;
+  min-height: 340px;
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.15));
+}
+.topology-svg text {
+  font-family: var(--font-sans);
+}
+
+.network-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.network-block {
+  padding: 26px;
+}
+.network-block h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.network-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.network-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.tool-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: var(--glow-cyan);
+  flex-shrink: 0;
+}
+
+@media (max-width: 880px) {
+  .network-layout {
+    grid-template-columns: 1fr;
+  }
+}
